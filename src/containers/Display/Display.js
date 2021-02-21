@@ -1,9 +1,10 @@
-import { Input } from "reactstrap";
+import "./Display.css";
 
 const Display = () => {
+
   return (
     <div>
-      <Input type='text' />
+      <h2 className='Display'>1234567890</h2>
     </div>
   );
 };

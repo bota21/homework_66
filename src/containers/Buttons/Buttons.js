@@ -2,8 +2,9 @@ import "./Buttons.css";
 import { Button } from "reactstrap";
 
 const Buttons = () => {
+  
   return (
-    <div className='buttons_wrapper'>
+    <div className='Buttons'>
       <Button color='secondary'>7</Button>
       <Button color='secondary'>8</Button>
       <Button color='secondary'>9</Button>

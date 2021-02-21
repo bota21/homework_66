@@ -1,8 +1,8 @@
-.buttons_wrapper {
+.Buttons {
   width: 221px;
   display: flex;
   flex-wrap: wrap;
 }
-.buttons_wrapper button {
+.Buttons button {
   margin: 10px;
 }
