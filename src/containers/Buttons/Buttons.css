@@ -1,8 +1,21 @@
 .Buttons {
-  width: 221px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .Buttons button {
-  margin: 10px;
+  margin: 5px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clean.btn.btn-danger,
+.zero.btn.btn-secondary {
+  width: 100px;
+}
+.symbol.btn.btn-primary,
+.symbol.btn.btn-success {
+  width: 60px;
 }
