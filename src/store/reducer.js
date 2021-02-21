@@ -4,6 +4,8 @@ import {
   ADD_MINUS,
   ADD_MULTIPLICATION,
   ADD_DIVISION,
+  TOTAL_SUM,
+  DELETE_ONE
 } from "./actionTypes";
 
 const initialState = {
@@ -22,6 +24,13 @@ const reducer = (state = initialState, action) => {
       return { ...state, counter: state.counter + action.value };
     case ADD_DIVISION:
       return { ...state, counter: state.counter + action.value };
+    case TOTAL_SUM:
+        console.log(state.counter);
+        let sum = eval(state.counter);
+        console.log(sum);
+        return{...state, counter:  eval(state.counter)};
+        case DELETE_ONE:
+          return {...state, counter: state.counter.substring(0, state.counter.length - 1)}
     default:
         return state;
   }

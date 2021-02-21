@@ -1,14 +1,13 @@
 import "./Buttons.css";
 import { Button } from "reactstrap";
 import { useDispatch } from "react-redux";
-import { ADD_MINUS, ADD_MULTIPLICATION, ADD_NUMBER, ADD_PLUS, ADD_DIVISION } from '../../store/actionTypes';
+import { ADD_MINUS, ADD_MULTIPLICATION, ADD_NUMBER, ADD_PLUS, ADD_DIVISION, TOTAL_SUM, DELETE_ONE } from '../../store/actionTypes';
 
 const Buttons = () => {
     const dispatch = useDispatch();
     const addNumber = number => {
         dispatch({type: ADD_NUMBER, value: number})
     }
-
     const addPlus = () => {
         dispatch({type: ADD_PLUS, value: '+'})
     }
@@ -21,7 +20,12 @@ const Buttons = () => {
     const addDivision = () => {
         dispatch({type: ADD_DIVISION, value: '/'})
     }
-    
+    const totalSum = () => {
+        dispatch({type: TOTAL_SUM})
+    }
+    const deleteOne = () => {
+        dispatch({type: DELETE_ONE})
+    }
 
   return (
     <div className='Buttons'>
@@ -37,9 +41,9 @@ const Buttons = () => {
       <Button color='secondary' onClick={() => addNumber('2')}>2</Button>
       <Button color='secondary' onClick={() => addNumber('1')}>1</Button>
       <Button color='primary' onClick={addMultiplication}>*</Button>
-      <Button color='danger'> &lt; </Button>
+      <Button color='danger' onClick={deleteOne}> &lt; </Button>
       <Button color='secondary' onClick={() => addNumber('0')}>0</Button>
-      <Button color='success'>=</Button>
+      <Button color='success' onClick={totalSum}>=</Button>
       <Button color='primary' onClick={addDivision}>/</Button>
     </div>
   );
